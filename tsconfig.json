@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "ES2017",
+        "lib": ["DOM", "ESNext"],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": false,
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "checkJs": true,
+        "noEmit": true,
+        "importsNotUsedAsValues": "error",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "exactOptionalPropertyTypes": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedIndexedAccess": false,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": false,
+        "skipLibCheck": true
+    }
+}
