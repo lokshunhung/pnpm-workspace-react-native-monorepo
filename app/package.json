@@ -1,0 +1,37 @@
+{
+    "name": "app",
+    "version": "0.0.1",
+    "license": "UNLICENSED",
+    "private": true,
+    "main": "./AppEntry.js",
+    "scripts": {
+        "start": "expo start",
+        "android": "expo start --android",
+        "ios": "expo start --ios",
+        "web": "expo start --web"
+    },
+    "dependencies": {
+        "expo": "~48.0.6",
+        "expo-status-bar": "~1.4.4",
+        "metro-runtime": "0.76.0",
+        "react": "18.2.0",
+        "react-native": "0.71.3"
+    },
+    "devDependencies": {
+        "@babel/core": "7.21.0",
+        "@babel/preset-env": "7.20.2",
+        "@babel/runtime": "7.21.0",
+        "@types/metro-config": "0.66.0"
+    },
+    "pnpm": {
+        "overrides": {
+            "metro": "0.76.0",
+            "metro-config": "0.76.0",
+            "metro-core": "0.76.0",
+            "metro-react-native-babel-transformer": "0.76.0",
+            "metro-resolver": "0.76.0",
+            "metro-runtime": "0.76.0",
+            "metro-source-map": "0.76.0"
+        }
+    }
+}
