@@ -4,6 +4,7 @@
     "private": true,
     "license": "UNLICENSED",
     "scripts": {
+        "typecheck": "tsc",
         "test": "jest"
     }
 }
