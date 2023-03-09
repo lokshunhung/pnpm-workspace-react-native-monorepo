@@ -1,3 +1,5 @@
+"use strict";
+
 const { getDefaultConfig } = require("expo/metro-config");
 const path = require("path");
 
@@ -33,5 +35,6 @@ module.exports = defineConfig(getDefaultConfig(__dirname), {
     watchFolders: [
         path.join(projectRootDir, "node_modules", ".pnpm"),
         path.join(projectRootDir, "pkgs"),
+        // ---
     ],
 });

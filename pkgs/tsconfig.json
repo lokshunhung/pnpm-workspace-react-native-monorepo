@@ -1,3 +1,9 @@
 {
-    "extends": "@lokshunhung/cnf/tsconfig.base.json"
+    "extends": "@lokshunhung/cnf/tsconfig.base.json",
+    "compilerOptions": {
+        "target": "ES2017",
+        "lib": ["ESNext"],
+        "module": "ESNext",
+        "noEmit": true
+    }
 }
