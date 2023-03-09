@@ -1,4 +1,5 @@
 const { getDefaultConfig } = require("expo/metro-config");
+const path = require("path");
 
 /** @typedef {import("metro-config").InputConfigT} ConfigT */
 
@@ -8,22 +9,29 @@ function defineConfig(base, config) {
     return mergeConfig(base, config);
 }
 
+const projectRootDir = path.join(__dirname, "..", "..");
+
 /** @type {{ [_: string]: string }} */
 const extraNodeModules = {};
 
 module.exports = defineConfig(getDefaultConfig(__dirname), {
+    projectRoot: projectRootDir,
     resolver: {
         unstable_enableSymlinks: true,
         extraNodeModules: new Proxy(extraNodeModules, {
             get(target, name, receiver) {
                 const fs = require("fs");
-                const tmpDir = __dirname + "/tmp";
+                const tmpDir = path.join(__dirname, "tmp");
                 if (!(fs.existsSync(tmpDir) && fs.statSync(tmpDir).isDirectory())) {
                     fs.mkdirSync(tmpDir, { recursive: true });
                 }
-                fs.appendFileSync(__dirname + "/tmp/resolution-log.txt", name + "\n", "utf8");
+                fs.appendFileSync(path.join(tmpDir, "resolution-log.txt"), name + "\n", "utf8");
                 return target[name];
             },
         }),
     },
+    watchFolders: [
+        path.join(projectRootDir, "node_modules", ".pnpm"),
+        path.join(projectRootDir, "pkgs"),
+    ],
 });
