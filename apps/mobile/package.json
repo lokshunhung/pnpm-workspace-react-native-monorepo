@@ -11,9 +11,9 @@
         "web": "expo start --web"
     },
     "dependencies": {
+        "@lokshunhung/math": "workspace:*",
         "expo": "~48.0.6",
         "expo-status-bar": "~1.4.4",
-        "metro-runtime": "0.76.0",
         "react": "18.2.0",
         "react-native": "0.71.3"
     },
@@ -21,6 +21,7 @@
         "@babel/core": "7.21.0",
         "@babel/preset-env": "7.20.2",
         "@babel/runtime": "7.21.0",
-        "@types/metro-config": "0.66.0"
+        "@types/metro-config": "0.66.0",
+        "metro-runtime": "0.76.0"
     }
 }

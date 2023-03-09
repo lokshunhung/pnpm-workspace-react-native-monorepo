@@ -32,6 +32,7 @@ importers:
       '@babel/core': 7.21.0
       '@babel/preset-env': 7.20.2
       '@babel/runtime': 7.21.0
+      '@lokshunhung/math': workspace:*
       '@types/metro-config': 0.66.0
       expo: ~48.0.6
       expo-status-bar: ~1.4.4
@@ -39,9 +40,9 @@ importers:
       react: 18.2.0
       react-native: 0.71.3
     dependencies:
+      '@lokshunhung/math': link:../../pkgs/math
       expo: 48.0.6_@babel+core@7.21.0
       expo-status-bar: 1.4.4
-      metro-runtime: 0.76.0
       react: 18.2.0
       react-native: 0.71.3_raab37p3ikkajcivlo24zcd7ie
     devDependencies:
@@ -49,6 +50,7 @@ importers:
       '@babel/preset-env': 7.20.2_@babel+core@7.21.0
       '@babel/runtime': 7.21.0
       '@types/metro-config': 0.66.0
+      metro-runtime: 0.76.0
 
   pkgs/cnf:
     specifiers:
@@ -5815,7 +5817,6 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       react-refresh: 0.4.3
-    dev: false
 
   /metro-source-map/0.76.0:
     resolution: {integrity: sha512-tAXlHI6EOtRTkhXynZbe/as7pBDBxDaHftq/7pV3QCGyLeSaTNy6wzXI5ewr3kTuZxtBXktQH/Zl0rhKO8DGMA==}
@@ -6772,7 +6773,6 @@ packages:
   /react-refresh/0.4.3:
     resolution: {integrity: sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /react-shallow-renderer/16.15.0_react@18.2.0:
     resolution: {integrity: sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==}
