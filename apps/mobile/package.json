@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "license": "UNLICENSED",
     "private": true,
-    "main": "./AppEntry.js",
+    "main": "./AppEntry.ts",
     "scripts": {
         "start": "expo start",
         "android": "expo start --android",
@@ -22,6 +22,7 @@
         "@babel/preset-env": "7.20.2",
         "@babel/runtime": "7.21.0",
         "@types/metro-config": "0.66.0",
+        "@types/react": "18.0.28",
         "metro-runtime": "0.76.0"
     }
 }
