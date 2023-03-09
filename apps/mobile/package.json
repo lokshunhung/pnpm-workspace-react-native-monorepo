@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "license": "UNLICENSED",
     "private": true,
-    "main": "./AppEntry.ts",
+    "main": "./src/AppEntry.ts",
     "scripts": {
         "start": "expo start",
         "android": "expo start --android",
