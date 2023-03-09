@@ -3,9 +3,7 @@
     "version": "0.0.1",
     "private": true,
     "license": "UNLICENSED",
-    "scripts": {
-        "test": "jest"
-    },
+    "scripts": {},
     "devDependencies": {
         "@swc/core": "^1.3.38",
         "@swc/jest": "^0.2.24",
