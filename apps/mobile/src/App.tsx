@@ -1,4 +1,4 @@
-import { add } from "@lokshunhung/math/src/add";
+import { MathDemo } from "@lokshunhung/ui/src/MathDemo";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -6,7 +6,7 @@ export function App() {
     return (
         <View style={styles.container}>
             <Text>Open up src/App.tsx to start working on your app!</Text>
-            <Text>1 + 1 = {add(1, 1)}</Text>
+            <MathDemo a={1} b={1} />
             <StatusBar style="auto" />
         </View>
     );

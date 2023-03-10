@@ -1,0 +1,10 @@
+{
+    "extends": "@lokshunhung/cnf/tsconfig.base.json",
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["DOM", "ESNext"],
+        "module": "ES2015",
+        "noEmit": true,
+        "jsx": "react-native"
+    }
+}
