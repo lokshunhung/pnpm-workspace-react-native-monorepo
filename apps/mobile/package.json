@@ -20,7 +20,7 @@
         "react-native-web": "~0.18.10"
     },
     "devDependencies": {
-        "@babel/runtime": "7.21.0",
+        "@babel/runtime": "7.23.8",
         "@expo/webpack-config": "^18.0.1",
         "@types/metro-config": "0.66.0",
         "@types/react": "18.0.28",

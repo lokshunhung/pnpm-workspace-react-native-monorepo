@@ -2,8 +2,5 @@
     "name": "@lokshunhung/cnf",
     "version": "0.0.1",
     "private": true,
-    "license": "UNLICENSED",
-    "devDependencies": {
-        "@types/prettier": "^2.7.2"
-    }
+    "license": "UNLICENSED"
 }
