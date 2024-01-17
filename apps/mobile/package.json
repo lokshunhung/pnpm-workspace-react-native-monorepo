@@ -12,18 +12,17 @@
     },
     "dependencies": {
         "@lokshunhung/ui": "workspace:*",
-        "expo": "~48.0.6",
-        "expo-status-bar": "~1.4.4",
+        "expo": "50.0.0-preview.11",
+        "expo-status-bar": "~1.11.1",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "react-native": "0.71.3",
-        "react-native-web": "~0.18.10"
+        "react-native": "0.73.2",
+        "react-native-web": "~0.19.10"
     },
     "devDependencies": {
         "@babel/runtime": "7.23.8",
-        "@expo/webpack-config": "^18.0.1",
-        "@types/metro-config": "0.66.0",
-        "@types/react": "18.0.28",
+        "@expo/webpack-config": "^19.0.1",
+        "@types/react": "18.2.48",
         "metro-runtime": "0.76.0"
     }
 }

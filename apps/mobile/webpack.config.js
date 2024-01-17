@@ -11,11 +11,11 @@ const fs = require("fs");
 
 const WORKSPACE_ROOT = path.join(__dirname, "..", "..");
 
-/** @type {(_: any) => string} */
-function prettyFormat(value) {
+/** @type {(_: any) => Promise<string>} */
+async function prettyFormat(value) {
     const contents = require("pretty-format").format(value, { min: true, printFunctionName: false });
     // @ts-ignore
-    const formattedContents = require("prettier").format("_ = " + contents, require("@lokshunhung/cnf/prettier.config"));
+    const formattedContents = await require("prettier").format("_ = " + contents, require("@lokshunhung/cnf/prettier.config"));
     return formattedContents.replace(/^_ = /, "module.exports = ");
 }
 
@@ -23,10 +23,13 @@ function prettyFormat(value) {
 function findBabelLoaderRule(config) {
     config.module ??= {};
     config.module.rules ??= [];
+    if (!config.module.rules[1]) throw new Error();
     if (typeof config.module.rules[1] === "string") throw new Error();
     config.module.rules[1].oneOf ??= [];
     const babelLoaderRule = config.module.rules[1].oneOf[2];
     if (
+        babelLoaderRule &&
+        typeof babelLoaderRule === "object" &&
         typeof babelLoaderRule.use === "object" &&
         !Array.isArray(babelLoaderRule.use) &&
         babelLoaderRule.use.loader?.includes(path.sep + "babel-loader" + path.sep)
@@ -70,7 +73,7 @@ module.exports = async function config(env, argv) {
         await fs.promises.mkdir(tmpDir, { recursive: true });
     }
     const outFile = path.join(tmpDir, "wp");
-    const contents = prettyFormat(config);
+    const contents = await prettyFormat(config);
     await fs.promises.writeFile(outFile, contents, "utf8");
 
     return config;
