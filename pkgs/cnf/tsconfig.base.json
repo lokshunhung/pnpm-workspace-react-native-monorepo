@@ -6,6 +6,7 @@
         "resolveJsonModule": true,
         "checkJs": true,
         "importsNotUsedAsValues": "error",
+        "ignoreDeprecations": "5.0",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
