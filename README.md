@@ -1,7 +1,7 @@
 # pnpm workspace react native monorepo setup
 
-- `metro` related packages are pinned at `0.76.0`  
-  the new version added support for symlinks via `config.resolver.unstable_enableSymlinks` = `true`, which is must be enabled for pnpm to work
+- `metro` related packages are pinned at `0.80.4`  
+  the new version added support for symlinks via `config.resolver.unstable_enableSymlinks` = `true`, which is must be enabled for pnpm to work (defaults to `true` since `0.79.0`)
 - the expo project needs an explicit dependency declaration of `metro-runtime`, with the same version of the bundler, since this package is referenced and injected at bundle time
 - to make `metro` aware of the workspace root and other packages, their paths must be added to `config.watchFolders` in `metro.config.js`, and `config.projectRoot` must be set manually
 - each ui package must also have `react`, `react-native`, `react-native-web` declared as dependencies for `webpack` to resolve them correctly at bundle time

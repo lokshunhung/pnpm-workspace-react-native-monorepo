@@ -23,6 +23,6 @@
         "@babel/runtime": "7.23.8",
         "@expo/webpack-config": "^19.0.1",
         "@types/react": "18.2.48",
-        "metro-runtime": "0.76.0"
+        "metro-runtime": "0.80.4"
     }
 }

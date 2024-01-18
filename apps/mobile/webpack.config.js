@@ -15,8 +15,8 @@ const WORKSPACE_ROOT = path.join(__dirname, "..", "..");
 async function prettyFormat(value) {
     const contents = require("pretty-format").format(value, { min: true, printFunctionName: false });
     // @ts-ignore
-    const formattedContents = await require("prettier").format("_ = " + contents, require("@lokshunhung/cnf/prettier.config"));
-    return formattedContents.replace(/^_ = /, "module.exports = ");
+    const prettierConfig = require("@lokshunhung/cnf/prettier.config");
+    return await require("prettier").format("module.exports = " + contents, { ...prettierConfig, filepath: "_.js" });
 }
 
 /** @param {Config} config */
