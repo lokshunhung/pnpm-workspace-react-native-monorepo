@@ -11,6 +11,8 @@
 <ul>
 <li>Metro GitHub Issue on Symlinks:
 <br><a href="https://github.com/facebook/metro/issues/1#issuecomment-1436062881">robhogan @ facebook/metro#1</a></li>
+<li>Metro GitHub Issue on watching additional folders:
+<br><a href="https://github.com/facebook/metro/issues/7#issuecomment-508129053">fiznool @ facebook/metro#7</a></li>
 <li>PNPM GitHub Issue Related Discussion on Usage With Expo:<br>
 <a href="https://github.com/pnpm/pnpm/issues/3010#issuecomment-740224466">vjpr @ pnpm/pnpm#3010</a></li>
 <li>Archived Repo for Yarn Workspaces:<br>
