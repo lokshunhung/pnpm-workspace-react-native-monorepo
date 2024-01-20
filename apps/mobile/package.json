@@ -11,14 +11,14 @@
     },
     "dependencies": {
         "@lokshunhung/ui": "workspace:*",
-        "expo": "50.0.0-preview.11",
+        "expo": "50.0.2",
         "expo-status-bar": "~1.11.1",
         "react": "18.2.0",
         "react-native": "0.73.2"
     },
     "devDependencies": {
         "@babel/runtime": "7.23.8",
-        "@types/react": "18.2.48",
-        "metro-runtime": "0.80.4"
+        "@expo/metro-runtime": "3.1.1",
+        "@types/react": "18.2.48"
     }
 }
