@@ -3,9 +3,9 @@
 const { getDefaultConfig } = require("expo/metro-config");
 const path = require("path");
 
-/** @typedef {import("metro-config").InputConfigT} ConfigT */
+/** @typedef {import("expo/metro-config").MetroConfig} MetroConfig */
 
-/** @type {(_: ConfigT, _: ConfigT) => ConfigT} */
+/** @type {(_: MetroConfig, _: MetroConfig) => MetroConfig} */
 function defineConfig(base, config) {
     const { mergeConfig } = require("metro-config");
     return mergeConfig(base, config);
